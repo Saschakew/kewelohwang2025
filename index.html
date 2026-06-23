@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVAR Visualizer - Interactive Structural Vector Autoregression</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="An interactive web-based tool for visualizing and understanding Structural Vector Autoregression (SVAR) models. Explore data generating processes, identification strategies, and estimation techniques.">
+    <meta name="keywords" content="SVAR, Structural Vector Autoregression, Econometrics, Time Series Analysis, Data Visualization, Macroeconomics, Economics, Interactive Model">
+    <meta name="author" content="Sascha Keweloh">
+    <link rel="canonical" href="https://KewelohWang2025.sascha-keweloh.com/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SVAR Visualizer - Interactive Structural Vector Autoregression" />
+    <meta property="og:description" content="Explore the mechanics of SVAR models with this interactive educational tool. Adjust parameters and see the impact on data and estimates in real-time." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://KewelohWang2025.sascha-keweloh.com/" />
+    <meta property="og:site_name" content="SVAR Visualizer" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SVAR Visualizer - Interactive Structural Vector Autoregression" />
+    <meta name="twitter:description" content="An interactive tool for exploring and understanding SVAR models, from data generation to identification and estimation." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap"></noscript>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/paragraph_util.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <header class="hero-section">
+        <!-- Particle Animation Canvas -->
+        <canvas id="hero-particles" aria-hidden="true"></canvas>
+
+        <header class="hero-meta">
+            <h1 class="paper-title">
+                Uncertain Short-Run Restrictions<br>
+                and Statistically Identified<br>
+                Structural Vector Autoregressions
+            </h1>
+            <div class="author-details">
+                <div class="author-block">
+                    <p class="author-name">Sascha&nbsp;A.&nbsp;Keweloh</p>
+                    <p class="author-affiliation">TU&nbsp;Dortmund&nbsp;University</p>
+                </div>
+                <div class="author-block">
+                    <p class="author-name">Shu&nbsp;Wang</p>
+                    <p class="author-affiliation">University&nbsp;of&nbsp;Göttingen</p>
+                </div>
+            </div>
+            <p class="paper-journal"><em>Journal of Applied Econometrics</em></p>
+            <a href="http://doi.org/10.1002/jae.70012" target="_blank">Paper</a>
+        </header>
+    </header>
+
+    <nav id="main-nav" class="main-navigation">
+        <ul>
+            <li><a href="#section-zero" class="active-link">Intro</a></li>
+            <li><a href="#section-one">Section One</a></li>
+            <li><a href="#section-two">Section Two</a></li>
+            <li><a href="#section-three">Section Three</a></li>
+            <li><a href="#section-four">Section Four</a></li>
+            <li><a href="#section-resources">Resources</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" class="container">
+        <!-- Section Zero: Intro -->
+        <div id="section-zero-placeholder" class="content-section-placeholder">
+                <section id="section-zero" class="intro-section content-section">
+                    <h2>Welcome to an interactive illustration</h2>
+                    <p class="section-intro">This interactive demo invites you to explore a combination of a statistical identification approach with potentially
+                    invalid short-run zero restrictions in SVAR models. Our ridge-regularised estimator <em>shrinks towards</em> economically motivated zero restrictions when the data support them and <em>relaxes</em> them when evidence suggests otherwise</p>
+                    <p>With only a handful of sliders and switches you can:</p>
+                    <ul>
+                        <li>Generate data under alternative data-generating processes.</li>
+                        <li>Observe how estimates based on invalid short-run restrictions lead to biased esimates.</li>
+                        <li>Explore how estimates based on non-Gaussianity tend to be volatile.</li>
+                        <li>Explore how our combination of statistical identification with short-run restrictions balances efficiency and
+                            robustness</li>
+                    </ul>
+                    <p>Tweak a control and watch plots, matrices, and LaTeX formulas update in real time.</p>
+                </section>
+            </div>
+
+        <div id="loading-overlay">
+            <div class="loading-spinner"></div>
+            <p>Loading other sections, please wait...</p>
+        </div>
+
+        <!-- Section One: SVAR Setup -->
+        <div id="section-one-placeholder" data-section-src="public/sections/section_one.html" class="content-section-placeholder"></div>
+
+        <!-- Section Two: Identification via Higher Moments -->
+        <div id="section-two-placeholder" data-section-src="public/sections/section_two.html" class="content-section-placeholder"></div>
+
+        <!-- Section Three: Identification with Non-Gaussian Shocks -->
+        <div id="section-three-placeholder" data-section-src="public/sections/section_three.html" class="content-section-placeholder"></div>
+
+        <!-- Section Four: Identification with Heteroskedasticity -->
+        <div id="section-four-placeholder" data-section-src="public/sections/section_four.html" class="content-section-placeholder"></div>
+
+        <!-- Section Resources: Additional Resources and Links -->
+        <div id="section-resources-placeholder" class="content-section-placeholder">
+            <section id="section-resources" class="resources-section content-section">
+                <h2>Additional Resources</h2>
+                <p class="section-intro">Thank you for exploring this interactive guide. If you're interested in diving deeper, the following resources provide the foundational research and further examples.</p>
+                
+                <div class="resources-container">
+                    <div class="resource-category">
+                        <h3>Links</h3>
+                        <ul class="resource-list">
+                            <li>Paper: <a href=" " target="_blank">Uncertain Short-Run Restrictions and Statistical Identification in SVARs - Keweloh & Wang (2025)</a> </li>
+                            <li>More interactive guides: <a href="https://sascha-keweloh.com/" target="_blank">www.sascha-keweloh.com</a></li>  
+                            <li>Get a brief overview on statistical identification in SVARs: <a
+                                    href="https://www.annualreviews.org/content/journals/10.1146/annurev-economics-070124-051419"
+                                    target="_blank">Identification Based on Higher Moments in Macroeconometrics. - Lewis, Daniel J., Annual
+                                Review of Economics 17 (2025)</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>For questions or further information about this research, please contact:</p>
+                    <ul>
+                        <li>Sascha A. Keweloh - <a href="mailto:sascha.keweloh@tu-dortmund.de">sascha.keweloh@tu-dortmund.de</a></li>
+                        <li>Shu Wang - <a href="mailto:shu.wang@uni-goettingen.de">shu.wang@uni-goettingen.de</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy;2025 Sascha Keweloh. |  <a href="https://sascha-keweloh.com/impressum.html">Impressum</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="public/js/debug_manager.js" defer></script>
+    <script src="public/js/content_templates.js" defer></script>
+    <script src="public/js/plot_utils.js" defer></script>
+    <script src="public/js/shared_data.js" defer></script>
+    <script src="public/js/latex_utils.js" defer></script>
+    <script src="public/js/dynamic_latex_manager.js" defer></script>
+    <script src="public/js/ui_factory.js" defer></script>
+    <script src="public/js/svar_general_functions.js" defer></script>
+    <script src="public/js/svar_math_util.js" defer></script>
+    <script src="public/js/svar_functions.js" defer></script>
+    <script src="public/js/shared_controls.js" defer></script>
+
+    <script src="public/js/sections/section_one.js" defer></script>
+    <script src="public/js/sections/section_two.js" defer></script>
+    <script src="public/js/sections/section_three.js" defer></script>
+    <script src="public/js/sections/section_four.js" defer></script>
+    <script src="public/js/sections/section_resources.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js" defer></script>
+    <script src="public/js/hero_particles.js" defer></script>
+    <script src="public/js/navigation.js" defer></script>
+        <script src="public/js/svar_general_functions.js" defer></script>
+    <script src="public/js/svar_functions.js" defer></script>
+    <script src="public/js/main.js" defer></script>
+
+</body>
+</html>
